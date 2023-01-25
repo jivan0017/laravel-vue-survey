@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-  import PageComponent from '../components/layouts/PageComponent.vue';
+  import PageComponent from '../../components/layouts/PageComponent.vue';
 
   // export default {
   //   name: "Dashboard"

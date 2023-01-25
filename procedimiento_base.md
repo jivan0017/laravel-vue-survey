@@ -90,8 +90,29 @@ const router = createRouter({
 
 export default router;
 
+# instalar AXIOS en modo de Guardado
+- comando 
+npm i -S axios
+
+# sitio web para copiar iconos - svg
+- enlace:
+https://heroicons.com/
+
+# instakar UUID
+npm i -S uuid
 
 
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------
 ### BACKEND
 
 # Crear modelos
@@ -106,4 +127,33 @@ php artisan migrate
 # Crear controlladores
 - ejecutar el comando:
 php artisan make:controller auth/AuthController --resource
+
+- Crear controlador para Survey
+php artisan make:controller Survey/SurveyController --model=Survey --api --requests
+
+- crear recursos:
+php artisan make:resource SurveyResource
+
+- LIBRERÍA EXTERNA
+composer require spatie/laravel-sluggable
+
+# ROUTER
+- Listar todas las rutas API
+ php artisan route:list
+
+# MIGRACIÓN agregar una columna a la tabla
+- ejecutar el comando:
+php artisan make:migration add_image_column_to_surveys_table
+
+php artisan optimize
+php artisan cache:clear 
+php artisan route:cache
+php artisan config:cache
+
+php artisan migrate:rollback
+php artisan migrate
+
+
+
+
 

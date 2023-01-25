@@ -1,11 +1,12 @@
 import {createRouter, createWebHistory} from 'vue-router';
 import store from '../store';
-import Dashboard from '../views/Dashboard.vue'
-import DefaultLayout from '../components/layouts/DefaultLayout.vue'
-import AuthLayout from '../components/layouts/AuthLayout.vue'
-import Login from '../views/Login.vue'
-import Register from '../views/Register.vue'
-import Surveys from '../views/Surveys.vue'
+import Dashboard from '../views/dashboard/Dashboard.vue';
+import DefaultLayout from '../components/layouts/DefaultLayout.vue';
+import AuthLayout from '../components/layouts/AuthLayout.vue';
+import Login from '../views/auth/Login.vue';
+import Register from '../views/auth/Register.vue';
+import Surveys from '../views/surveys/Surveys.vue';
+import SurveyView from '../views/surveys/SurveyView.vue';
 
 const routes = [
   {
@@ -24,6 +25,16 @@ const routes = [
         path: '/surveys',
         name: 'Surveys',
         component: Surveys
+      },
+      {
+        path: '/suvey/create',
+        name: 'SurveyCreate',
+        component: SurveyView
+      },
+      {
+        path: '/survey/:id',
+        name: 'SurveyView',
+        component: SurveyView
       },
     ]
   },

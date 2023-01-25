@@ -254,11 +254,13 @@ export default {
       //   .catch((error) => {
       //     console.log("error >>> ", error)
       //   })
-      store.dispatch('logoutAction').then(()=> {
-          console.log(" promesa realizada logout")
+
+      store.dispatch('logoutAction')
+        .then(()=> {
+          console.log("responde el logoutaction despues de disparar la acción <<<")
           router.push({
             name: "Login",
-          });
+        });
       })
     }
 
